@@ -80,3 +80,18 @@ budget.addEventListener("input", () => {
 
 render(baseline, "Baseline ready");
 renderTrace(baseline);
+
+// Recording mode cycles real UI states so a screen recording shows the working prototype.
+if (new URLSearchParams(window.location.search).get("demo") === "1") {
+  const demoBudgets = [100, 60, 140, 100];
+  let demoIndex = 0;
+  const advanceDemo = () => {
+    const nextBudget = demoBudgets[demoIndex % demoBudgets.length];
+    budget.value = nextBudget;
+    const result = allocate(nextBudget);
+    render(result, demoIndex === 0 ? "Baseline ready" : "Intervention applied");
+    renderTrace(result);
+    demoIndex += 1;
+  };
+  window.setInterval(advanceDemo, 5000);
+}

@@ -16,6 +16,8 @@ This is a systems simulator, not a conversational agent and not a personality mo
 
 Open `index.html` in a modern browser. No server or package installation is required.
 
+For a real screen recording, open `recording.html?demo=1`. Recording mode cycles through baseline and intervention states every five seconds using the same UI and deterministic allocator.
+
 ## Reproducibility
 
 The allocation is deterministic for the same budget and agent values. Change the budget slider, click **Run intervention**, and compare the result with the preserved baseline.
