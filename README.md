@@ -18,6 +18,8 @@ Open `index.html` in a modern browser. No server or package installation is requ
 
 For a real screen recording, open `recording.html?demo=1`. Recording mode cycles through baseline and intervention states every five seconds using the same UI and deterministic allocator.
 
+The repository includes a GitHub Pages deployment workflow. The live URL is `https://xqscora.github.io/signal-commons/` once the workflow completes successfully; verify the URL before using it in a submission.
+
 ## Reproducibility
 
 The allocation is deterministic for the same budget and agent values. Change the budget slider, click **Run intervention**, and compare the result with the preserved baseline.
