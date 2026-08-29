@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal Commons</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">GIBC V2 · OPEN TRACK PROTOTYPE</p>
+      <h1>Signal Commons</h1>
+      <p class="lede">A transparent resource-allocation simulator where agents reveal constraints before the system makes a tradeoff.</p>
+    </header>
+
+    <section class="controls" aria-labelledby="controls-title">
+      <div>
+        <p class="eyebrow">INTERVENTION</p>
+        <h2 id="controls-title">Change the commons</h2>
+        <p class="muted">Move the available budget and run one deterministic intervention.</p>
+      </div>
+      <label class="budget-control">
+        <span>Available units <output id="budget-output">100</output></span>
+        <input id="budget" type="range" min="35" max="180" value="100" step="5">
+      </label>
+      <button id="run" type="button">Run intervention</button>
+    </section>
+
+    <section class="metrics" aria-label="System metrics">
+      <article><span>Need coverage</span><strong id="coverage">0%</strong></article>
+      <article><span>Weighted satisfaction</span><strong id="satisfaction">0%</strong></article>
+      <article><span>Inequality index</span><strong id="inequality">0.00</strong></article>
+      <article><span>Budget used</span><strong id="used">0 / 0</strong></article>
+    </section>
+
+    <section class="workspace">
+      <div class="panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">AGENT SIGNALS</p>
+            <h2>Constraints before allocation</h2>
+          </div>
+          <span class="status" id="status">Baseline ready</span>
+        </div>
+        <div id="agent-list" class="agent-list"></div>
+      </div>
+
+      <aside class="panel comparison">
+        <p class="eyebrow">TRACE</p>
+        <h2>Why did the outcome move?</h2>
+        <div id="trace" class="trace"></div>
+        <div class="legend"><span class="dot need"></span> need coverage <span class="dot tradeoff"></span> tradeoff</div>
+      </aside>
+    </section>
+
+    <footer>
+      <span>Deterministic local simulation · no external data</span>
+      <span>Signal Commons / 2026</span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
