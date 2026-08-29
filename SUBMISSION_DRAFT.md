@@ -34,6 +34,12 @@ When a system hides constraints, a lower allocation can look arbitrary. When con
 
 This is an **Open** track project: a working interactive technical prototype demonstrating transparent system behavior. It is not a theoretical paper, a slide deck, a conversational companion, or a personality model.
 
+## Live demo
+
+https://xqscora.github.io/signal-commons/
+
+The live demo is a convenience link. The submission still needs the required public source repository and a separate 2–5 minute demo video.
+
 ## Built With
 
 - HTML5
